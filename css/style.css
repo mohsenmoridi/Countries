@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+#search {
+  margin-bottom: 16px;
+}
+
+#search form {
+  position: relative;
+}
+
+#search form input:focus {
+  outline: none;
+}
+
+#search form input[type="text"] {
+  transition: 0.3s all ease-in-out;
+  padding: 8px 104px 8px 16px;
+  width: 100%;
+  height: 48px;
+  border-radius: 24px;
+  border: 2px solid #d8d8cf;
+}
+
+#search form input[type="text"]:hover {
+  box-shadow: 0 10px 10px #d8d8cf;
+}
+
+#search form input[type="submit"] {
+  transition: 0.3s all ease-in-out;
+  color: #fff;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #7b149b;
+}
+
+#search form input[type="submit"]:hover {
+  box-shadow: 0 10px 10px #d8d8cf;
+  background: #ba31e4;
+}
+
+#search form p {
+  padding: 16px;
+  color: #777;
+}
+
+#search form ul#counrties_list {
+  list-style: none;
+}
+
+#search form ul#counrties_list li {
+  transition: 0.3s all ease-in-out;
+  margin: 4px 0;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 32px;
+}
+
+#search form ul#counrties_list li:hover {
+  background: #d8d8cf;
+}
+
+#country #flag {
+  position: relative;
+}
+
+#country #flag #flag-back {
+  position: absolute;
+  top: -32px;
+  bottom: -32px;
+  left: -32px;
+  right: -32px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(50px);
+  opacity: 0.1;
+}
+
+#country #flag img {
+  max-width: 100%;
+  border-radius: 24px;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

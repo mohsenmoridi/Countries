@@ -1,0 +1,115 @@
+$color-primary: rgb(123, 20, 155);
+$color-gray: rgb(216, 216, 207);
+$color-white: #fff;
+
+@mixin transition {
+    transition: 0.3s all ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+#search {
+    margin-bottom: 16px;
+
+    form {
+        position: relative;
+
+        input:focus {
+            outline: none;
+        }
+
+        input[type="text"] {
+            @include transition;
+            padding: 8px 104px 8px 16px;
+            width: 100%;
+            height: 48px;
+            border-radius: 24px;
+            border: 2px solid $color-gray;
+
+            &:hover {
+                box-shadow: 0 10px 10px $color-gray;
+            }
+        }
+
+        input[type="submit"] {
+            @include transition;
+            color: $color-white;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background: $color-primary;
+            &:hover {
+                box-shadow: 0 10px 10px $color-gray;
+
+                background: lighten($color-primary, 20%);
+            }
+        }
+
+        p {
+            padding: 16px;
+            color: #777;
+        }
+
+        ul#counrties_list {
+            list-style: none;
+
+            li {
+                @include transition;
+                margin: 4px 0;
+                padding: 8px 16px;
+                cursor: pointer;
+                border-radius: 32px;
+
+                &:hover {
+                    background: $color-gray;
+                }
+            }
+        }
+    }
+}
+
+#country {
+    #flag {
+        position: relative;
+
+        #flag-back {
+            position: absolute;
+            top: -32px;
+            bottom: -32px;
+            left: -32px;
+            right: -32px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter:blur(50px);
+            opacity: 0.1;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 24px;
+            position: relative;
+
+        }
+    }
+}
